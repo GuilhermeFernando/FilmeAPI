@@ -145,3 +145,5 @@ E:\FilmesAPI\obj\Debug\net6.0\refint\FilmesAPI.dll
 E:\FilmesAPI\obj\Debug\net6.0\FilmesAPI.pdb
 E:\FilmesAPI\obj\Debug\net6.0\FilmesAPI.genruntimeconfig.cache
 E:\FilmesAPI\obj\Debug\net6.0\ref\FilmesAPI.dll
+E:\FilmesAPI\bin\Debug\net6.0\FilmesAPI.xml
+E:\FilmesAPI\obj\Debug\net6.0\FilmesAPI.xml
