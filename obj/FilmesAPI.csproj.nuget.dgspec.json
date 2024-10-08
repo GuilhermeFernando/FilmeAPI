@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FilmesAPI\\FilmesApi\\FilmesAPI.csproj": {}
+    "E:\\FilmesAPI\\FilmesAPI.csproj": {}
   },
   "projects": {
-    "E:\\FilmesAPI\\FilmesApi\\FilmesAPI.csproj": {
+    "E:\\FilmesAPI\\FilmesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FilmesAPI\\FilmesApi\\FilmesAPI.csproj",
+        "projectUniqueName": "E:\\FilmesAPI\\FilmesAPI.csproj",
         "projectName": "FilmesAPI",
-        "projectPath": "E:\\FilmesAPI\\FilmesApi\\FilmesAPI.csproj",
+        "projectPath": "E:\\FilmesAPI\\FilmesAPI.csproj",
         "packagesPath": "C:\\Users\\guife\\.nuget\\packages\\",
-        "outputPath": "E:\\FilmesAPI\\FilmesApi\\obj\\",
+        "outputPath": "E:\\FilmesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guife\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
