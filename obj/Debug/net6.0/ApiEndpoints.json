@@ -103,7 +103,7 @@
   },
   {
     "ContainingType": "FilmesAPI.Controllers.CinemaController",
-    "Method": "DeletaFilme",
+    "Method": "DeletaCinema",
     "RelativePath": "Cinema/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,

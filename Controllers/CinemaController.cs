@@ -49,7 +49,9 @@ public class CinemaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadCinemaDto> RecuperaCinema([FromQuery] int skip = 0, [FromQuery] int take = 10)
     {
+       
         return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.Skip(skip).Take(take));
+        
     }
 
 
@@ -64,8 +66,8 @@ public class CinemaController : ControllerBase
     {
         var cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
         if (cinema == null) return NotFound();
-        var filmeDto = _mapper.Map<ReadCinemaDto>(cinema);
-        return Ok(filmeDto);
+        var cinemaDto = _mapper.Map<ReadCinemaDto>(cinema);
+        return Ok(cinemaDto);
     }
 
 
@@ -93,7 +95,7 @@ public class CinemaController : ControllerBase
     /// <response code="204">Caso atualização seja feita com sucesso</response>
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public IActionResult DeletaFilme(int id)
+    public IActionResult DeletaCinema(int id)
     {
         var cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
         if (cinema == null) return NotFound();

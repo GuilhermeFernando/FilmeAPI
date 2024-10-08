@@ -11,6 +11,7 @@ public class EnderecoProfile : Profile
         CreateMap<CreateEnderecoDto, Endereco>();
         CreateMap<UpdateEnderecoDto, Endereco>();
         CreateMap<Endereco, ReadEnderecoDto>();
+        CreateMap<Endereco, UpdateEnderecoDto>();
 
     }
 }

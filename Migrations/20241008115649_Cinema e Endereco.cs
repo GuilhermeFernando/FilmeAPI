@@ -23,6 +23,21 @@ namespace FilmesAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Filmes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Genero = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Duracao = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Filmes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Cinemas",
                 columns: table => new
                 {
@@ -53,6 +68,9 @@ namespace FilmesAPI.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Cinemas");
+
+            migrationBuilder.DropTable(
+                name: "Filmes");
 
             migrationBuilder.DropTable(
                 name: "Enderecos");

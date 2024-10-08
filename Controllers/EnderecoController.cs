@@ -39,8 +39,6 @@ public class EnderecoController : ControllerBase
         }
     }
 
-
-
     /// <summary>
     /// Consulta toda a lista de endereços cadastrados
     /// </summary>
@@ -52,7 +50,6 @@ public class EnderecoController : ControllerBase
     {
         return _mapper.Map<List<ReadEnderecoDto>>(_context.Enderecos.Skip(skip).Take(take));
     }
-
 
     /// <summary>
     /// Consulta endereços cadastrados por ID
@@ -69,7 +66,6 @@ public class EnderecoController : ControllerBase
         return Ok(enderecoDto);
     }
 
-
     /// <summary>
     /// Atualiza informações do Endereço por ID
     /// </summary>
@@ -85,7 +81,6 @@ public class EnderecoController : ControllerBase
         _context.SaveChanges();
         return NoContent();
     }
-
 
     /// <summary>
     /// Deleta um endereço utilizando o ID do cinema
