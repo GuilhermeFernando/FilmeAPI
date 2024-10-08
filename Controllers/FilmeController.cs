@@ -52,7 +52,7 @@ public class FilmeController : ControllerBase
 
 
     /// <summary>
-    /// Consulta filmes cadastrados por ID
+    /// Consulta cinemas cadastrados por ID
     /// </summary>
     /// <returns>IActionResult</returns>
     /// <response code="200">Caso consulta seja feita com sucesso</response>

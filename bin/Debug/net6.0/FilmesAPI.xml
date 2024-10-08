@@ -4,6 +4,78 @@
         <name>FilmesAPI</name>
     </assembly>
     <members>
+        <member name="M:FilmesAPI.Controllers.CinemaController.AdicionaCinema(FilmesAPI.Data.Dtos.CreateCinemaDto)">
+            <summary>
+            Adiciona um cinema ao banco de dados
+            </summary>
+            <param name="cinemaDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.RecuperaCinema(System.Int32,System.Int32)">
+            <summary>
+            Consulta toda a lista de cinemas cadastrados
+            </summary>
+            <returns>IEnumerable</returns>
+            <response code="200">Caso consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.RecuperaCinemaID(System.Int32)">
+            <summary>
+            Consulta cinemas cadastrados por ID
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.AtualizaCinema(System.Int32,FilmesAPI.Data.Dtos.UpdateCinemaDto)">
+            <summary>
+            Atualiza informações do Cinema por ID
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso atualização seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.DeletaFilme(System.Int32)">
+            <summary>
+            Deleta um cinema utilizando o ID do cinema
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="204">Caso atualização seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.AdicionaEndereco(FilmesAPI.Data.Dtos.CreateEnderecoDto)">
+            <summary>
+            Adiciona um Endereco ao banco de dados
+            </summary>
+            <param name="cinemaDto">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.RecuperaEndereco(System.Int32,System.Int32)">
+            <summary>
+            Consulta toda a lista de endereços cadastrados
+            </summary>
+            <returns>IEnumerable</returns>
+            <response code="200">Caso consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.RecuperaEnderecoID(System.Int32)">
+            <summary>
+            Consulta endereços cadastrados por ID
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso consulta seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.AtualizaEndereco(System.Int32,FilmesAPI.Data.Dtos.UpdateEnderecoDto)">
+            <summary>
+            Atualiza informações do Endereço por ID
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Caso atualização seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.DeletaEndereco(System.Int32)">
+            <summary>
+            Deleta um endereço utilizando o ID do cinema
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="204">Caso atualização seja feita com sucesso</response>
+        </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.AdicionaFilme(FilmesAPI.Data.Dtos.CreateFilmeDto)">
             <summary>
             Adiciona um filme ao banco de dados
@@ -21,7 +93,7 @@
         </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.RecuperaFilmesID(System.Int32)">
             <summary>
-            Consulta filmes cadastrados por ID
+            Consulta cinemas cadastrados por ID
             </summary>
             <returns>IActionResult</returns>
             <response code="200">Caso consulta seja feita com sucesso</response>
