@@ -12,7 +12,7 @@
             <returns>IActionResult</returns>
             <response code="201">Caso inserção seja feita com sucesso</response>
         </member>
-        <member name="M:FilmesAPI.Controllers.CinemaController.RecuperaCinema(System.Int32,System.Int32)">
+        <member name="M:FilmesAPI.Controllers.CinemaController.RecuperaCinema">
             <summary>
             Consulta toda a lista de cinemas cadastrados
             </summary>
@@ -134,7 +134,7 @@
             <returns>IEnumerable</returns>
             <response code="200">Caso consulta seja feita com sucesso</response>
         </member>
-        <member name="M:FilmesAPI.Controllers.SessaoController.RecuperaSessaoID(System.Int32)">
+        <member name="M:FilmesAPI.Controllers.SessaoController.RecuperaSessaoID(System.Int32,System.Int32)">
             <summary>
             Consulta sessão cadastrados por ID
             </summary>

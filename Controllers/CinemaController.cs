@@ -3,6 +3,7 @@ using FilmesAPI.Data;
 using FilmesAPI.Data.Dtos;
 using FilmesAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 namespace FilmesAPI.Controllers;
 
 
@@ -46,10 +47,10 @@ public class CinemaController : ControllerBase
     /// <response code="200">Caso consulta seja feita com sucesso</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadCinemaDto> RecuperaCinema([FromQuery] int skip = 0, [FromQuery] int take = 10)
+    public IEnumerable<ReadCinemaDto> RecuperaCinema()
     {
        
-        return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.Skip(skip).Take(take));
+        return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas).ToList();
         
     }
 

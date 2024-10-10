@@ -65,13 +65,18 @@
   {
     "ContainingType": "FilmesAPI.Controllers.SessaoController",
     "Method": "RecuperaSessaoID",
-    "RelativePath": "{controller}/{id}",
+    "RelativePath": "{controller}/{filmeId}/{cinemaId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "filmeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cinemaId",
         "Type": "System.Int32",
         "IsRequired": true
       },
@@ -118,18 +123,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "skip",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "take",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[FilmesAPI.Data.Dtos.ReadCinemaDto, FilmesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

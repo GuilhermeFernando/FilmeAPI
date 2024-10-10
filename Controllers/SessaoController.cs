@@ -32,7 +32,7 @@ public class SessaoController : ControllerBase
             Sessao sessao = _mapper.Map<Sessao>(sessaoDto);
             _context.Sessoes.Add(sessao);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(RecuperaSessaoID), new { id = sessao.Id }, sessaoDto);
+            return CreatedAtAction(nameof(RecuperaSessaoID), new { filmeid = sessao.FilmeId, cinemaId = sessao.CinemaId }, sessao);
         }
     }
 
@@ -58,14 +58,18 @@ public class SessaoController : ControllerBase
     /// </summary>
     /// <returns>IActionResult</returns>
     /// <response code="200">Caso consulta seja feita com sucesso</response>
-    [HttpGet("{id}")]
+    [HttpGet("{filmeId}/{cinemaId}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IActionResult RecuperaSessaoID(int id)
+    public IActionResult RecuperaSessaoID(int filmeId, int cinemaId)
     {
-        var sessao = _context.Cinemas.FirstOrDefault(sessao => sessao.Id == id);
-        if (sessao == null) return NotFound();
-        var cinemaDto = _mapper.Map<ReadSessaoDto>(sessao);
-        return Ok(cinemaDto);
+        Sessao sessao = _context.Sessoes.FirstOrDefault(sessao => sessao.FilmeId == filmeId && sessao.CinemaId == cinemaId);
+        if(sessao != null) 
+        {
+            ReadSessaoDto sessaoDto = _mapper.Map<ReadSessaoDto>(sessao);
+            return Ok(sessaoDto);
+        }
+        return NotFound();
+
     }
 
 }
