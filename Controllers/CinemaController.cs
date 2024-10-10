@@ -47,10 +47,14 @@ public class CinemaController : ControllerBase
     /// <response code="200">Caso consulta seja feita com sucesso</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadCinemaDto> RecuperaCinema()
+    public IEnumerable<ReadCinemaDto> RecuperaCinema([FromQuery] int? enderecoId = null)
     {
+        if(enderecoId == null)
+        {
+            return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas).ToList();
+        }
+        return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.FromSqlRaw($"SELECT Id, Nome, EnderecoId FROM Cinemas WHERE Cinemas.EnderecoId = {enderecoId}").ToList());
        
-        return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas).ToList();
         
     }
 
